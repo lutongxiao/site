@@ -1,0 +1,251 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+#container{
+    overflow: auto;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    position:fixed;
+    bottom: 0px;
+    left: 5%;
+    background-color: white;
+}
+#header{
+    display: flex;
+    height: 55px;
+    background-color: #fff;
+}
+#header .logo1{
+    height: 55px;
+    width: 55px;
+    background-image: url(../imgs/南京.png);
+    background-size: 100% 100%;
+    float: left;
+}
+#header .logo2{
+    height: 55px;
+    width: 55px;
+    background-image: url(../imgs/南京.png);
+    transform: rotateY(180deg);
+    background-size: 100% 100%;
+    float: right;
+}
+#title{
+    line-height: 48px;
+    width:400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: Microsoft YaHei;
+}
+#nav{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgba(38, 130, 206, 0.733);
+    text-align: center;
+    font-family: Microsoft YaHei;
+}
+.lv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: whitesmoke;
+    border-right: 3px solid goldenrod;
+}
+#nav_city{
+    position: absolute;
+    top: 0;
+    left: 153px;
+    display: flex;
+    width: 300px;
+    height: 50px;
+}
+#nav_city a{
+    display: block;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: 1s;
+}
+#nav_city a:nth-child(1):hover{
+    background-color: yellowgreen;
+}
+#nav_city a:nth-child(2):hover{
+    background-color: yellowgreen;
+}
+#nav_city a:nth-child(3):hover{
+    background-color: yellowgreen;
+}
+#calendar{
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    color: whitesmoke;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+#footer{
+    width: 100%;
+    height: 90px;
+    position:relative;
+    bottom: -16px;
+    right: 0%;
+    background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    text-align: center;
+    border-radius: 8px;
+}
+
+#footer hr{
+    width: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: white;
+    border: 0px;
+}
+#icon{
+    display: flex;
+    width: 50%;
+    height: 60px;
+    margin: 0 auto;
+}
+#icon a{
+    display: inline-block;
+    width: 25%;
+    height: 60px;
+    line-height: 0;
+}
+#icon a img{
+    width: auto;
+    height: 60px;
+    vertical-align: bottom;
+    transform: scale(0.5);
+}
+#icon a:hover{
+    transform: scale(1.3);
+    transition-duration: 0.7s;
+}
+#content{
+    height: 550px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Microsoft YaHei;
+}
+#content p{
+    line-height: 2em;
+}
+#block1{
+    overflow: auto;
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    height: 90%;
+    width: 28%;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    box-shadow: darkgrey 5px 5px 5px 5px  ;
+}
+#block2{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    height: 35%;
+    width: 29%;
+    background-image: url(../imgs/南京.gif);
+    background-size: 100% 100%;
+    box-shadow: darkgrey 2px 2px 2px 2px  ;
+}
+#block3{
+    overflow: auto;
+    position: absolute;
+    top: 44%;
+    left: 35%;
+    height: 50%;
+    width: 29%;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    box-shadow: darkgrey 5px 5px 5px 5px  ;
+}
+#block4{
+    overflow: auto;
+    position: absolute;
+    top: 5%;
+    left: 68%;
+    height: 90%;
+    width: 28%;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    box-shadow: darkgrey 5px 5px 5px 5px  ;
+}
+#block1 img{
+    height: 150px;
+    width: 150px;
+}
+#block4 hr{
+    width: 90%;
+    margin: 0 auto;
+}
+#content p{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+#scollbar{
+    margin: 0 auto;
+    height: 30px;
+    width: 200px;
+    border-radius: 30px;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.front{
+    height: 30px;
+    width: 30px;
+    float: left;
+    background-image: url(../imgs/左右箭头.svg);
+    transform: rotate(180deg);
+    background-size: 80% 70%;
+    background-repeat: no-repeat;
+    background-position: 5px 5px ;
+}
+.after{
+    height: 30px;
+    width: 30px;
+    float: right;
+    background-image: url(../imgs/左右箭头.svg);
+    background-size: 70% 80%;
+    background-repeat: no-repeat;
+    background-position: 7px 2.5px ;
+}
+#copyright{
+    margin-top: 5px;
+}
+
+
+
