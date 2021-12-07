@@ -1,10 +1,14 @@
 *{
     margin: 0px;
     padding: 0px;
+    z-index: 2;
 }
 html,body{
     height: 100%;
     width: 100%;
+}
+body{
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 .left{
     float: left;
@@ -20,12 +24,11 @@ html,body{
     position:fixed;
     bottom: 0px;
     left: 5%;
-    background-color: white;
 }
 #header{
     display: flex;
     height: 55px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
 }
 #header .logo1{
     height: 55px;
@@ -42,14 +45,32 @@ html,body{
     background-size: 100% 100%;
     float: right;
 }
+/* Neon Text Effect   Reference: "https://codepen.io/AllThingsSmitty/pen/VzXrgY"*/
+@keyframes shining {
+    from {
+      text-shadow: 0 0 6px rgba(182, 211, 207, 0.9),
+        0 0 30px rgba(207, 211, 182, 0.3), 0 0 12px rgba(223, 157, 15, 0.5),
+        0 0 21px rgba(223, 175, 15, 0.945), 0 0 34px rgba(223, 157, 15, 0.8),
+        0 0 54px rgba(223, 157, 15, 0.9);
+    }
+    to {
+      text-shadow: 0 0 6px rgba(182, 211, 207, 1),
+        0 0 30px rgba(207, 211, 182, 0.4), 0 0 12px rgba(223, 157, 15, 0.6),
+        0 0 22px rgba(223, 157, 15, 0.8), 0 0 38px rgba(223, 157, 15, 0.9),
+        0 0 60px rgba(223, 157, 15, 1);
+    }
+  } 
 #title{
     line-height: 48px;
     width:400px;
     margin: 0 auto;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 400;
-    font-family: Microsoft YaHei;
+    font-family: "Pacifico", cursive;
+    text-transform: uppercase;
+    color: #f2ec36;
+    animation: shining 0.1s alternate infinite;
 }
 #nav{
     display: flex;
@@ -118,7 +139,7 @@ html,body{
     position:relative;
     bottom: -16px;
     right: 0%;
-    background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    background-image: linear-gradient(-225deg, #2cd8d5bb 0%, #c5c1ff8f 56%, #ffbac3a4 100%);
     text-align: center;
     border-radius: 8px;
 }
@@ -205,6 +226,11 @@ html,body{
     background-color: whitesmoke;
     box-shadow: darkgrey 5px 5px 5px 5px  ;
 }
+#clock{
+    float: right;
+    height: 150px;
+    width: 150px;
+}
 #block1 img{
     height: 150px;
     width: 150px;
@@ -219,12 +245,24 @@ html,body{
 }
 #scollbar{
     margin: 0 auto;
+    display: flex;
     height: 30px;
-    width: 200px;
+    width: 300px;
     border-radius: 30px;
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(120deg, #a1c4fdbb 0%, #c2e9fbbd 100%);
 }
-.front{
+#ID{
+    margin: 0px 105px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 500;
+}
+#front{
     height: 30px;
     width: 30px;
     float: left;
@@ -232,19 +270,130 @@ html,body{
     transform: rotate(180deg);
     background-size: 80% 70%;
     background-repeat: no-repeat;
-    background-position: 5px 5px ;
+    background-position: 3px 5.5px ;
 }
-.after{
+#after{
+    float: right;
     height: 30px;
     width: 30px;
-    float: right;
     background-image: url(../imgs/左右箭头.svg);
-    background-size: 70% 80%;
+    background-size: 80% 70%;
     background-repeat: no-repeat;
-    background-position: 7px 2.5px ;
+    background-position: 3px 3px ;
 }
 #copyright{
     margin-top: 5px;
+}
+/* snow background reference: "https://codepen.io/loktar00/pen/CHpGo" */
+canvas{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: linear-gradient(bottom, #09203f 0%, #537895 100%);
+    background-image: -o-linear-gradient(bottom, #09203f 0%, #537895 100%);
+    background-image: -moz-linear-gradient(bottom, #09203f 0%, #537895 100%);
+    background-image: -webkit-linear-gradient(bottom, #09203f 0%, #537895 100%);
+    background-image: -ms-linear-gradient(bottom, #09203f 0%, #537895 100%);
+    
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb#09203f),
+        color-stop(0.84, rgb(23,82,145))
+    );
+}
+
+/* block  reference:"https://blog.csdn.net/m0_46690660/article/details/108541866*/
+#clock {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 15px 10px;
+    border-radius: 50%;
+    box-shadow: 2.5px 2.5px 10px rgba(0, 0, 0, 0.5);
+    background: #0f0f0fcb;
+    border: 10px solid #0e0d0d;
+}
+.box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.box div {
+    width: 0px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    transform: rotate(0deg);
+    transform-origin: bottom right;
+    background: rgba(255, 0, 0, 0.5);
+}
+.box div:after {
+    content: "";
+    position: absolute;
+    background: #484848;
+    width: 0.25px;
+    height: 2.5px;
+    left: -0.5px;
+}
+.box div.five:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 5px;
+    left: -0.5px;
+    top: 0;
+    background:	#484848;
+    border-radius: 0 0 1px 1px;
+}
+.second {
+    width: 1px;
+    height: 40px;
+    background: red;
+    position: absolute;
+    left: 50px;
+    margin-top: 10px;
+    z-index: 10;
+    transform: rotate(0deg);
+    transform-origin: center 40px;
+}
+.second:after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: red;
+    border-radius: 50%;
+    bottom: -3px;
+    left: -2.5px;
+}
+.minute {
+    width: 2px;
+    height: 30px;
+    background: #8b8b8d;
+    position: absolute;
+    left: 50px;
+    margin-top: 20px;
+    z-index: 9;
+    transform-origin: center bottom;
+    transform: rotate(12deg);
+}
+.hour {
+    width: 3px;
+    height: 25px;
+    background: whitesmoke;
+    position: absolute;
+    left: 50px;
+    margin-top: 25px;
+    z-index: 8;
+    border-radius: 3px;
+    transform: rotate(30deg);
+    transform-origin: center bottom;
 }
 
 
